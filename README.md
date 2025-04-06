@@ -2,12 +2,21 @@
 - Download the source code from the releases page
 - Open a new terminal at the extracted folder
 - run `npm install dotenv -run-dev`
-- run `npm run build:all`
+- run `cp .env.example .env`
+- Open `.env` in a text editor and imput your universities canvas URL and Instructure URL
+   - If you don't know the Instructure URL, you can just guess, or leave it as any random URL. 
+- Run `npm run build:all`
 - Save the "out" subfolder somewhere that you'll save it
-- **Firefox Installation (Debug)**
+- **Firefox Installation**
    - Go to `about:debugging#/runtime/this-firefox` in a new tab
-   - Press "Load Temporary Add-on..." and navigate to the out folder
-   - Open the "firefox" folder and select the `manifest.json` file. 
+   - Option 1 (Temporary/Debug Installation)
+      - Press "Load Temporary Add-on..." and navigate to the out folder
+      - Open the "firefox" folder and select the `manifest.json` file. 
+   - Option 2 (More Permanent, Only on Firefox Developer Edition)
+      - Run `npm run build:create-firefox-xpi`
+      - Go to `about:addons` in a new tab
+      - Press on the settings gear and click "Install add-on from file"
+      - Select `extension.xpi`
 - **Chrome Installation**
    - Go to `chrome://extensions` in a new tab
    - In the upper right-hand corner set the "developer mode" switch to enabled
