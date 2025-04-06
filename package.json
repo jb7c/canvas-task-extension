@@ -13,21 +13,25 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "build": "node utils/build.js chrome",
-    "firefox": "node utils/build.js firefox",
+    "prebuild:firefox": "node generate-manifest.js firefox",
+    "build:firefox": "node utils/build.js firefox",
+    "prebuild:chrome": "node generate-manifest.js chrome",
+    "build:chrome": "node utils/build.js chrome",
     "zip": "cd build; zip -r ../build.zip * -x \"build/.*\" -x \"build/__MACOSX\"",
     "start": "node utils/webserver.js",
     "prettier": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,html}'",
     "lint": "eslint src/**/*.ts src/**/*.tsx",
     "test": "jest",
     "storybook": "NODE_OPTIONS=--openssl-legacy-provider storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build:all": "npm run build:firefox && npm run build:chrome"
   },
   "dependencies": {
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
     "axios": "^0.21.1",
     "d3-ease": "^3.0.1",
+    "dotenv": "^16.4.7",
     "immutability-helper": "^3.1.1",
     "json-bigint": "^1.0.0",
     "react": "^17.0.1",

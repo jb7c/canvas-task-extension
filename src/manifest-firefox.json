@@ -17,7 +17,10 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://*/*"],
+      "matches": [
+        "UNIVERSITYURL",
+        "INSTRUCTUREURL"
+        ],
       "js": ["contentScript.bundle.js"],
       "css": ["content.styles.css"],
       "all_frames": true

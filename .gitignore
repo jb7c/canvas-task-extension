@@ -26,3 +26,6 @@ log/
 secrets.*.js
 *.secret.*
 *.secrets
+
+# notes
+notes.txt
