@@ -46,12 +46,10 @@ let manifestContent = fs.readFileSync(manifestSrc, 'utf8');
 
 // Create the array of URL patterns as a JSON string
 const urlPatternsJson = JSON.stringify([universityUrlPattern, instructureUrlPattern]);
+const formattedUrlPatterns = urlPatternsJson.substring(1, urlPatternsJson.length - 1); // Remove the outer brackets
 
-// Replace the placeholder with the actual URL patterns
-manifestContent = manifestContent.replace(
-  '"PLACEHOLDER_MATCHES"', 
-  urlPatternsJson.substring(1, urlPatternsJson.length - 1) // Remove the outer brackets
-);
+// Replace all placeholders
+manifestContent = manifestContent.replace(/"PLACEHOLDER_MATCHES"/g, formattedUrlPatterns);
 
 // Ensure build directory exists
 fs.mkdirSync(path.dirname(manifestDest), { recursive: true });
