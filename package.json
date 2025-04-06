@@ -24,8 +24,9 @@
     "test": "jest",
     "storybook": "NODE_OPTIONS=--openssl-legacy-provider storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build:all": "npm run build:firefox && npm run build:chrome"
-  },
+  "build:all": "npm run build:firefox && cp dist/manifest-firefox.json dist/manifest.json"  
+},
+  
   "dependencies": {
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",

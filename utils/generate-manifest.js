@@ -34,7 +34,7 @@ const instructureUrlPattern = formatUrl(instructureUrl);
 
 // Source and destination paths
 const manifestSrc = path.resolve(__dirname, '..', `src/manifest-${browser}.json`);
-const manifestDest = path.resolve(__dirname, '..', 'dist/manifest.json');
+const manifestDest = path.resolve(__dirname, '..', `dist/manifest-${browser}.json`);
 
 if (!fs.existsSync(manifestSrc)) {
   console.error(`Manifest file not found: ${manifestSrc}`);
@@ -54,8 +54,11 @@ manifestContent = manifestContent.replace(/"PLACEHOLDER_MATCHES"/g, formattedUrl
 // Ensure build directory exists
 fs.mkdirSync(path.dirname(manifestDest), { recursive: true });
 
-// Write the updated manifest
+// Write the browser-specific manifest
 fs.writeFileSync(manifestDest, manifestContent);
+
+// Also write to the main manifest.json file
+fs.writeFileSync(path.resolve(__dirname, '..', 'dist/manifest.json'), manifestContent);
 
 console.log(`Generated manifest for ${browser} with custom URLs: ${manifestDest}`);
 console.log(`URLs: ${universityUrlPattern}, ${instructureUrlPattern}`);
