@@ -25,7 +25,7 @@
     "storybook": "NODE_OPTIONS=--openssl-legacy-provider storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build:all": "npm run build:firefox && cp dist/manifest-firefox.json dist/manifest.json",
-    "build:test": "npm run build:firefox && npm run build:chrome"  
+    "build:test": "npm run build:firefox && npm run build:chrome && cp dist/manifest-chrome.json build/manifest.json"  
 },
   
   "dependencies": {
