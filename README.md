@@ -1,6 +1,20 @@
+# Build Instructions
+- Download the source code from the releases page
+- Open a new terminal at the extracted folder
+- run `npm install dotenv -run-dev`
+- run `npm run build:all`
+- Save the "out" subfolder somewhere that you'll save it
+- **Firefox Installation (Debug)**
+   - Go to `about:debugging#/runtime/this-firefox` in a new tab
+   - Press "Load Temporary Add-on..." and navigate to the out folder
+   - Open the "firefox" folder and select the `manifest.json` file. 
+- **Chrome Installation**
+   - Go to `chrome://extensions` in a new tab
+   - In the upper right-hand corner set the "developer mode" switch to enabled
+   - Press "Load Unpacked" and navigate to the out folder
+   - Select the "chrome" folder and press "open"
 
-
-# Original Repo Information:
+## Original Repo Information:
 ----
 
 ## Tasks Browser Extension for Canvas Instructure
