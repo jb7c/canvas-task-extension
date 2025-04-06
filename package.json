@@ -13,9 +13,9 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "prebuild:firefox": "node generate-manifest.js firefox",
+    "prebuild:firefox": "node utils/generate-manifest.js firefox",
     "build:firefox": "node utils/build.js firefox",
-    "prebuild:chrome": "node generate-manifest.js chrome",
+    "prebuild:chrome": "node utils/generate-manifest.js chrome",
     "build:chrome": "node utils/build.js chrome",
     "zip": "cd build; zip -r ../build.zip * -x \"build/.*\" -x \"build/__MACOSX\"",
     "start": "node utils/webserver.js",
@@ -31,7 +31,6 @@
     "@types/react-dom": "^16.9.8",
     "axios": "^0.21.1",
     "d3-ease": "^3.0.1",
-    "dotenv": "^16.4.7",
     "immutability-helper": "^3.1.1",
     "json-bigint": "^1.0.0",
     "react": "^17.0.1",
@@ -71,6 +70,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.2.1",
     "css-loader": "^5.0.0",
+    "dotenv": "^16.4.7",
     "eslint": "^7.12.1",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-jest": "^24.1.3",

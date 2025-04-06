@@ -15,7 +15,7 @@
   "content_scripts": [
     {
       "matches": [
-        "PLACEHOLDER_MATCHES"
+        "https://canvas.YOURSCHOOL.edu/*","https://YOURSCHOOL.instructure.com/*"
         ],
       "js": ["contentScript.bundle.js"],
       "css": ["content.styles.css"],

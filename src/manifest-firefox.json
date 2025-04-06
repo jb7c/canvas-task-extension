@@ -18,8 +18,8 @@
   "content_scripts": [
     {
       "matches": [
-        "UNIVERSITYURL",
-        "INSTRUCTUREURL"
+        "PLACEHOLDER_MATCHES"
+        
         ],
       "js": ["contentScript.bundle.js"],
       "css": ["content.styles.css"],
