@@ -10,12 +10,14 @@ log/
 
 # production
 /build
+/dist
 *.zip
 *.crx
 *.pem
 
 # misc
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
@@ -30,5 +32,5 @@ secrets.*.js
 # notes
 notes.txt
 
-.env
-.DS_Store
+# outputs
+
