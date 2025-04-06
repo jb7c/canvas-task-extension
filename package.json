@@ -13,10 +13,11 @@
     "node": ">=16.0.0"
   },
   "scripts": {
+    "prebuild:strike": "rm -r out/",
     "prebuild:setup": "mkdir out && mkdir out/firefox && mkdir out/chrome",
     "prebuild:firefox": "node utils/generate-manifest.js firefox",
     "build:firefox": "node utils/build.js firefox",
-    "build:firefoxstage2": "npm run build:firefox && cp -R build/ out/firefox/",
+    "build:firefoxstage2": "npm run build:firefox && cp -R build/ out/firefox/ && cp dist/manifest-firefox.json out/firefox/build/manifest.json",
     "prebuild:chrome": "node utils/generate-manifest.js chrome",
     "build:chromestage2": "npm run build:chrome && cp dist/manifest-chrome.json build/manifest.json && cp -R build/ out/chrome/",
     "build:chrome": "node utils/build.js chrome",
@@ -29,7 +30,7 @@
     "build-storybook": "storybook build",
     "build:all": "npm run build:firefox && cp dist/manifest-firefox.json dist/manifest.json",
     "build:test": "npm run build:firefox && cp dist/manifest.json firefox/manifest.json && npm run build:chrome && cp dist/manifest-chrome.json build/manifest.json",
-    "build:alltowell": "npm run prebuild:setup && npm run build:firefoxstage2 && npm run build:chromestage2"  
+    "build:alltowell": "npm run prebuild:strike && npm run prebuild:setup && npm run build:firefoxstage2 && npm run build:chromestage2"  
 },
   
   "dependencies": {
