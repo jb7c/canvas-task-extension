@@ -13,7 +13,7 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "prebuild:strike": "rm -r out/",
+    "prebuild:strike": "[ -d out/ ] && rm -r out/ || echo 'out/ directory does not exist, skipping removal'",
     "prebuild:setup": "mkdir out && mkdir out/firefox && mkdir out/chrome",
     "prebuild:firefox": "node utils/generate-manifest.js firefox",
     "build:firefox": "node utils/build.js firefox",
