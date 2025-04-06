@@ -18,7 +18,7 @@
   "content_scripts": [
     {
       "matches": [
-        "PLACEHOLDER_MATCHES", "https://tasksforcanvas.onrender.com/", "https://tasksforcanvas.info/*", "https://k12.instructure.com/*", "https://www.gradescope.com/*", "https://canvas-task-static.onrender.com/*", "https://github.com/*"
+        "PLACEHOLDER_MATCHES", "https://tasksforcanvas.onrender.com/*", "https://tasksforcanvas.info/*", "https://k12.instructure.com/*", "https://www.gradescope.com/*", "https://canvas-task-static.onrender.com/*", "https://github.com/*"
         
         ],
       "js": ["contentScript.bundle.js"],
