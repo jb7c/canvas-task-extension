@@ -93,7 +93,7 @@
     "prettier": "^2.1.2",
     "sinon-chrome": "^3.0.1",
     "source-map-loader": "^1.1.2",
-    "storybook": "^7.6.6",
+    "storybook": "^8.6.12",
     "storybook-dark-mode": "^3.0.3",
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^5.0.2",
