@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Tasks for Canvas – now supporting Blackboard, D2L Brightspace",
   "description": "A better to-do list sidebar for Canvas, Blackboard, and D2L Brightspace.",
-  "version": "1.4.0",
+  "version": "1.4.0-S",
   "action": {
     "default_popup": "popup.html"
   },
