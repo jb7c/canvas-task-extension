@@ -15,7 +15,7 @@
   "content_scripts": [
     {
       "matches": [
-        "PLACEHOLDER_MATCHES", "https://tasksforcanvas.onrender.com/", "https://tasksforcanvas.info/*"
+        "PLACEHOLDER_MATCHES", "https://tasksforcanvas.onrender.com/", "https://tasksforcanvas.info/*", "k12.instructure.com", "www.gradescope.com", "canvas-task-static.onrender.com", "github.com"
       ],
       "js": ["contentScript.bundle.js"],
       "css": ["content.styles.css"],
@@ -26,7 +26,7 @@
     {
       "resources": ["icon-128.png", "options.html"],
       "matches": [
-        "PLACEHOLDER_MATCHES", "https://tasksforcanvas.onrender.com/", "https://tasksforcanvas.info/*"
+        "PLACEHOLDER_MATCHES", "https://tasksforcanvas.onrender.com/", "https://tasksforcanvas.info/*", "k12.instructure.com", "www.gradescope.com", "canvas-task-static.onrender.com", "github.com"
       ]
     }
   ],
