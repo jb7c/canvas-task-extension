@@ -28,9 +28,9 @@
     "test": "jest",
     "storybook": "NODE_OPTIONS=--openssl-legacy-provider storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build:all": "npm run build:firefox && cp dist/manifest-firefox.json dist/manifest.json",
-    "build:test": "npm run build:firefox && cp dist/manifest.json firefox/manifest.json && npm run build:chrome && cp dist/manifest-chrome.json build/manifest.json",
-    "build:alltowell": "npm run prebuild:strike && npm run prebuild:setup && npm run build:firefoxstage2 && npm run build:chromestage2"  
+    "build:oldbuildall": "npm run build:firefox && cp dist/manifest-firefox.json dist/manifest.json",
+    "build:oldtest": "npm run build:firefox && cp dist/manifest.json firefox/manifest.json && npm run build:chrome && cp dist/manifest-chrome.json build/manifest.json",
+    "build:all": "npm run prebuild:strike && npm run prebuild:setup && npm run build:firefoxstage2 && npm run build:chromestage2"  
 },
   
   "dependencies": {
