@@ -29,3 +29,6 @@ secrets.*.js
 
 # notes
 notes.txt
+
+.env
+.DS_Store
