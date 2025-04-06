@@ -12,6 +12,7 @@ log/
 /build
 /dist
 /firefox
+/out
 *.zip
 *.crx
 *.pem

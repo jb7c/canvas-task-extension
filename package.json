@@ -13,9 +13,12 @@
     "node": ">=16.0.0"
   },
   "scripts": {
+    "prebuild:setup": "mkdir out && mkdir out/firefox && mkdir out/chrome",
     "prebuild:firefox": "node utils/generate-manifest.js firefox",
     "build:firefox": "node utils/build.js firefox",
+    "build:firefoxstage2": "npm run build:firefox && cp -R build/ out/firefox/",
     "prebuild:chrome": "node utils/generate-manifest.js chrome",
+    "build:chromestage2": "npm run build:chrome && cp dist/manifest-chrome.json build/manifest.json && cp -R build/ out/chrome/",
     "build:chrome": "node utils/build.js chrome",
     "zip": "cd build; zip -r ../build.zip * -x \"build/.*\" -x \"build/__MACOSX\"",
     "start": "node utils/webserver.js",
@@ -25,7 +28,8 @@
     "storybook": "NODE_OPTIONS=--openssl-legacy-provider storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build:all": "npm run build:firefox && cp dist/manifest-firefox.json dist/manifest.json",
-    "build:test": "npm run build:firefox && cp dist/manifest.json firefox/manifest.json && npm run build:chrome && cp dist/manifest-chrome.json build/manifest.json"  
+    "build:test": "npm run build:firefox && cp dist/manifest.json firefox/manifest.json && npm run build:chrome && cp dist/manifest-chrome.json build/manifest.json",
+    "build:alltowell": "npm run prebuild:setup && npm run build:firefoxstage2 && npm run build:chromestage2"  
 },
   
   "dependencies": {
