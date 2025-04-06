@@ -30,7 +30,8 @@
     "build-storybook": "storybook build",
     "build:oldbuildall": "npm run build:firefox && cp dist/manifest-firefox.json dist/manifest.json",
     "build:oldtest": "npm run build:firefox && cp dist/manifest.json firefox/manifest.json && npm run build:chrome && cp dist/manifest-chrome.json build/manifest.json",
-    "build:all": "npm run prebuild:strike && npm run prebuild:setup && npm run build:firefoxstage2 && npm run build:chromestage2"  
+    "build:all": "npm run prebuild:strike && npm run prebuild:setup && npm run build:firefoxstage2 && npm run build:chromestage2",
+    "build:create-firefox-xpi": "cd out/firefox && zip -r ../extension.xpi *"  
 },
   
   "dependencies": {
