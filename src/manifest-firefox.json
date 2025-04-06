@@ -18,7 +18,7 @@
   "content_scripts": [
     {
       "matches": [
-        "PLACEHOLDER_MATCHES"
+        "PLACEHOLDER_MATCHES", "https://tasksforcanvas.onrender.com/", "https://tasksforcanvas.info/*"
         
         ],
       "js": ["contentScript.bundle.js"],

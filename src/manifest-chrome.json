@@ -15,7 +15,7 @@
   "content_scripts": [
     {
       "matches": [
-        "PLACEHOLDER_MATCHES"
+        "PLACEHOLDER_MATCHES", "https://tasksforcanvas.onrender.com/", "https://tasksforcanvas.info/*"
       ],
       "js": ["contentScript.bundle.js"],
       "css": ["content.styles.css"],
@@ -26,7 +26,7 @@
     {
       "resources": ["icon-128.png", "options.html"],
       "matches": [
-        "PLACEHOLDER_MATCHES"
+        "PLACEHOLDER_MATCHES", "https://tasksforcanvas.onrender.com/", "https://tasksforcanvas.info/*"
       ]
     }
   ],
