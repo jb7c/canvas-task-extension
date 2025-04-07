@@ -12,7 +12,7 @@
    - Option 1 (Temporary/Debug Installation)
       - Press "Load Temporary Add-on..." and navigate to the out folder
       - Open the "firefox" folder and select the `manifest.json` file. 
-   - Option 2 (More Permanent, Only on Firefox Developer Edition)
+   - Option 2 (More Permanent, Either requires Firefox Developer Edition or Automatic Verification through Mozilla developer portal)
       - Run `npm run build:create-firefox-xpi`
       - Go to `about:addons` in a new tab
       - Press on the settings gear and click "Install add-on from file"
