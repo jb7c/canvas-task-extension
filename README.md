@@ -3,10 +3,11 @@
 - Open a new terminal at the extracted folder
 - run `npm install dotenv -run-dev`
 - run `cp .env.example .env`
-- Open `.env` in a text editor and imput your universities canvas URL and Instructure URL
-   - If you don't know the Instructure URL, you can just guess, or leave it as any random URL. 
+- Open `.env` in a text editor and imput your university's Canvas URL and Instructure URL
+   - If you don't know the Instructure URL, you can just guess, or leave it as any random URL.
+   - These are typically the urls you'd use to access Canvas (i.e. `canvas.your-university.edu` and `your-university.instructure.com`)
 - Run `npm run build:all`
-- Save the "out" subfolder somewhere that you'll save it
+- Save the "out" subfolder somewhere that you'll remember.
 - **Firefox Installation**
    - Go to `about:debugging#/runtime/this-firefox` in a new tab
    - Option 1 (Temporary/Debug Installation)
